@@ -1,10 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
 }
 
 body {
   font-family: 'lato', 'Times New Roman', Times, serif;
+  overflow-x: hidden;
 }
 
 .alignment {
@@ -23,7 +27,19 @@ body {
           flex-direction: column;
 }
 
-.main_part {
+.background {
+  position: absolute;
+  width: 150vw;
+  height: 150vh;
+  background-color: #000000;
+  opacity: 0.5;
+  display: none;
+  z-index: 1;
+  right: -30vw;
+  top: -10vh;
+}
+
+.flex_grow {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -67,6 +83,128 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu_right1 {
+  position: relative;
+}
+
+.menu_right1::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  position: absolute;
+  top: 125%;
+  right: 15%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  z-index: -10;
+  -webkit-transition: all 800ms ease-out;
+  transition: all 800ms ease-out;
+}
+
+.tranparent_menu {
+  height: 50px;
+  width: 32px;
+  background-color: transparent;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  z-index: 2;
+  display: none;
+}
+
+.wrapper_block_menu {
+  background-color: transparent;
+  display: block;
+  width: 30vw;
+  height: 100vh;
+  left: 0;
+  top: 160%;
+  position: absolute;
+  z-index: 9;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.block_menu {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15vw;
+  left: 0;
+  top: -660px;
+  padding: 10px;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #cac6c6;
+  -webkit-transition: all 800ms ease-out;
+  transition: all 800ms ease-out;
+}
+
+.menu_right1:hover .block_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+.menu_right1:hover::before {
+  display: block;
+  z-index: 10;
+}
+
+.menu_right1:hover .tranparent_menu {
+  display: block;
+}
+
+.menu_right1:hover .background {
+  display: block;
+}
+
+.a_menu_fw {
+  padding: 0 65% 0 20%;
+  font-weight: 900;
+  text-decoration: none;
+  color: #000000;
+}
+
+.a_menu {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+}
+
+.a_menu:hover {
+  color: #FF6A6A;
+}
+
+.a_top {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+}
+
+.li_menu {
+  list-style-type: "";
+}
+
+.block_menu_button {
+  margin: 0 0 0 auto;
+  width: 14px;
+  height: 20px;
+  padding: 1px;
 }
 
 .top {
@@ -203,6 +341,67 @@ body {
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
+}
+
+.input1 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #222224;
+  opacity: 0.67;
+  background-color: #E1E1E1;
+  border-radius: 10px 0 0 10px;
+  max-width: 256px;
+  height: 49px;
+  padding-left: 22px;
+  -webkit-transition: all 400ms ease-out, background-color 400ms ease-out;
+  transition: all 400ms ease-out, background-color 400ms ease-out;
+}
+
+.input1:hover {
+  opacity: 0.8;
+}
+
+::-webkit-input-placeholder {
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+
+:-ms-input-placeholder {
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+
+::-ms-input-placeholder {
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+
+::placeholder {
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+
+.input1:hover::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.input1:hover:-ms-input-placeholder {
+  color: transparent;
+}
+
+.input1:hover::-ms-input-placeholder {
+  color: transparent;
+}
+
+.input1:hover::placeholder {
+  color: transparent;
 }
 
 .offer {
