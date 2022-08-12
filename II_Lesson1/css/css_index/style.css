@@ -6,6 +6,11 @@
   outline: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   font-family: 'lato', 'Times New Roman', Times, serif;
   overflow-x: hidden;
@@ -513,7 +518,7 @@ body {
 .wrapper_add_to_cart {
   display: none;
   position: absolute;
-  top: 150px;
+  top: 25%;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -575,6 +580,7 @@ body {
 }
 
 .block_text_product2 {
+  margin: 15px 0;
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
@@ -706,7 +712,7 @@ body {
           flex-flow: row nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-image: url(images/footer_fon.jpg);
+  background-image: url(../../images/footer_fon.jpg);
   height: 448px;
   background-size: cover;
   background-position: center;
