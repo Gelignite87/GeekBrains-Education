@@ -199,6 +199,9 @@ p
      font-size: 14px
      line-height: 17px
 
+.a_top1:hover
+     color: #F26376
+
 .a_top3
      color: #F26376
      display: block
@@ -522,7 +525,7 @@ p
           width: $width/2.88
           position: relative
           &_p
-               margin: 0 0 0 20px
+               margin: 0 60px 0 20px
                font-weight: 600
                font-size: 14px
                line-height: 17px
@@ -555,6 +558,13 @@ p
           transition: all 400ms ease-out
           box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.15)
 
+.filter_left_p_last
+     @extend .filter_left_p
+     margin-bottom: 20px
+
+details[open]>.filter_left_p_last
+     margin-bottom: 0
+
 summary
      display: block
      font-weight: 400
@@ -583,14 +593,14 @@ details[open]>.summary_mutation::after
      display: flex
      color: #6F6E6E
      padding: 10px 10px 10px 0
+     border-bottom: 1px solid grey
      &::after
           content: ' '
-          width: 100%
      &::before
           content: ' '
           margin: 0 6px 0 0
           background: #F16D7F
-          width: 10px
+          width: 6px
      &_p
           padding: 0 0 0 35px
           &:hover
@@ -689,7 +699,7 @@ details[open]>.summary_mutation_in::after
      display: flex
      flex-flow: row nowrap
      justify-content: space-around
-     background-image: url(../images/footer_fon.jpg)
+     background-image: url(../../images/footer_fon.jpg)
      height: 448px
      background-size: cover
      background-position: center
