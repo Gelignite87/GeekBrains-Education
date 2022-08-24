@@ -715,7 +715,8 @@ body {
   background-image: url(../../images/footer_fon.jpg);
   height: 448px;
   background-size: cover;
-  background-position: center;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .block_footer2 {
