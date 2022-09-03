@@ -44,6 +44,12 @@ input::-webkit-inner-spin-button {
           align-items: normal;
 }
 
+.flex1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .alignment {
   max-width: 75vw;
   margin: 0 auto;
@@ -214,7 +220,8 @@ input::-webkit-inner-spin-button {
 }
 
 .top__alignment {
-  margin: 60px auto;
+  padding: 60px 0;
+  margin: 0 auto;
 }
 
 .product__flex {
